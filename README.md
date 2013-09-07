@@ -1,8 +1,16 @@
 # Bouncing Ball Simulation
 
-Bouncing Ball Simulation Implemented using C++.NET
-
 ![alt Bouncing Ball][scr01]
+
+Bouncing Ball Simulation Implemented using C++.NET.
+
+Features:
+- Colorful balls
+- 3 kind of size
+- Multiple balls
+- Ball to ball collision
+- Reverse gravity
+- Slow Motion
 
 # License
 
