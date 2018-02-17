@@ -1,7 +1,7 @@
 #pragma once
 
 
-namespace Draw2DObjectForBaka {
+namespace CppDraw2DObj {
 
 	using namespace System;
 	using namespace System::ComponentModel;

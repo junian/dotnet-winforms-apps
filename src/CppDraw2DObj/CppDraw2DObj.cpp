@@ -1,9 +1,9 @@
-// Draw2DObjectForBaka.cpp : main project file.
+// CppDraw2DObj.cpp : main project file.
 
 #include "stdafx.h"
 #include "Form1.h"
 
-using namespace Draw2DObjectForBaka;
+using namespace CppDraw2DObj;
 
 [STAThreadAttribute]
 int main(array<System::String ^> ^args)
