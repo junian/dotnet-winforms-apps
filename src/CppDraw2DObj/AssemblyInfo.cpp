@@ -11,12 +11,12 @@ using namespace System::Security::Permissions;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 //
-[assembly:AssemblyTitleAttribute("Draw2DObjectForBaka")];
+[assembly:AssemblyTitleAttribute("CppDraw2DObj")];
 [assembly:AssemblyDescriptionAttribute("")];
 [assembly:AssemblyConfigurationAttribute("")];
-[assembly:AssemblyCompanyAttribute("Deimon Devil Bats")];
-[assembly:AssemblyProductAttribute("Draw2DObjectForBaka")];
-[assembly:AssemblyCopyrightAttribute("Copyright (c) Deimon Devil Bats 2009")];
+[assembly:AssemblyCompanyAttribute("")];
+[assembly:AssemblyProductAttribute("")];
+[assembly:AssemblyCopyrightAttribute("Copyright (c) 2009 - 2018")];
 [assembly:AssemblyTrademarkAttribute("")];
 [assembly:AssemblyCultureAttribute("")];
 
