@@ -21,7 +21,7 @@
     <ClCompile Include="AssemblyInfo.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="BakaDevBouncingBall.cpp">
+    <ClCompile Include="BouncingBall.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="stdafx.cpp">
