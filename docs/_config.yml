@@ -1,0 +1,5 @@
+theme: jekyll-theme-cayman
+title: Bouncing Ball Simulation
+description: A desktop app to simulate bouncing balls collission
+show_downloads: true
+google_analytics: UA-90418854-6
