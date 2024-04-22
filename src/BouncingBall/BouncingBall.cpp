@@ -1,9 +1,9 @@
-// BakaDevBouncingBall.cpp : main project file.
+// BouncingBall.cpp : main project file.
 
 #include "stdafx.h"
 #include "MainForm.h"
 
-using namespace BakaDevBouncingBall;
+using namespace BouncingBall;
 
 [STAThreadAttribute]
 int main(array<System::String ^> ^args)

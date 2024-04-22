@@ -6,7 +6,7 @@ using namespace System::Collections;
 using namespace System::Diagnostics;
 using namespace System::Windows::Forms;
 
-namespace BakaDevBouncingBall {
+namespace BouncingBall {
 
 	/// <summary>
 	/// Summary for DoubleBuffererPanel

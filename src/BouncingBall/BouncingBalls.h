@@ -1,7 +1,7 @@
 using namespace System::Drawing;
 using namespace System::Collections::Generic;
 
-namespace BakaDevBouncingBall
+namespace BouncingBall
 {
 	public ref class BouncingBalls
 	{

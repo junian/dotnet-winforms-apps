@@ -13,7 +13,7 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <ProjectGuid>{4C0DE59A-A82E-4A57-85FD-2D0942DF1451}</ProjectGuid>
-    <RootNamespace>BakaDevBouncingBall</RootNamespace>
+    <RootNamespace>BouncingBall</RootNamespace>
     <Keyword>ManagedCProj</Keyword>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
   </PropertyGroup>

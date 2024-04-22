@@ -2,9 +2,9 @@
 <VisualStudioProject
 	ProjectType="Visual C++"
 	Version="9,00"
-	Name="BakaDevBouncingBall"
+	Name="BouncingBall"
 	ProjectGUID="{4C0DE59A-A82E-4A57-85FD-2D0942DF1451}"
-	RootNamespace="BakaDevBouncingBall"
+	RootNamespace="BouncingBall"
 	Keyword="ManagedCProj"
 	TargetFrameworkVersion="196613"
 	>
@@ -204,7 +204,7 @@
 				>
 			</File>
 			<File
-				RelativePath=".\BakaDevBouncingBall.cpp"
+				RelativePath=".\BouncingBall.cpp"
 				>
 			</File>
 			<File

@@ -8,7 +8,7 @@ using namespace System::Data;
 using namespace System::Drawing;
 
 
-namespace BakaDevBouncingBall {
+namespace BouncingBall {
 
 	/// <summary>
 	/// Summary for About
@@ -90,7 +90,7 @@ namespace BakaDevBouncingBall {
 			this->label1->Name = L"label1";
 			this->label1->Size = System::Drawing::Size(259, 37);
 			this->label1->TabIndex = 1;
-			this->label1->Text = L"BakaDev Studio";
+			this->label1->Text = L"Juniansoft";
 			// 
 			// label2
 			// 
@@ -102,7 +102,7 @@ namespace BakaDevBouncingBall {
 			this->label2->Name = L"label2";
 			this->label2->Size = System::Drawing::Size(277, 31);
 			this->label2->TabIndex = 2;
-			this->label2->Text = L"Crazy Bouncing Ball";
+			this->label2->Text = L"Bouncing Ball";
 			// 
 			// label3
 			// 

@@ -1,6 +1,6 @@
 using namespace System;
 
-namespace BakaDevBouncingBall
+namespace BouncingBall
 {
 	public value class Vector2D
 	{

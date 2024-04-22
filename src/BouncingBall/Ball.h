@@ -2,7 +2,7 @@ using namespace System;
 using namespace System::Drawing;
 using namespace System::Drawing::Drawing2D;
 
-namespace BakaDevBouncingBall 
+namespace BouncingBall 
 {
 	public ref class Ball 
 	{

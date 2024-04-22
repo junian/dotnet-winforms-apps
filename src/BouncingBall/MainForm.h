@@ -8,7 +8,7 @@ using namespace System::Data;
 using namespace System::Drawing; 
 using namespace System::Drawing::Drawing2D;
 
-namespace BakaDevBouncingBall {
+namespace BouncingBall {
 
 	/// <summary>
 	/// Summary for MainForm
@@ -58,7 +58,7 @@ namespace BakaDevBouncingBall {
 				delete components;
 			}
 		}
-	private: BakaDevBouncingBall::DoubleBufferedPanel^  pnlBallWorld;
+	private: BouncingBall::DoubleBufferedPanel^  pnlBallWorld;
 	private: System::Windows::Forms::GroupBox^  grpControlCenter;
 	private: System::Windows::Forms::ComboBox^  cmbColor;
 
@@ -124,7 +124,7 @@ namespace BakaDevBouncingBall {
 			this->cmbColor = (gcnew System::Windows::Forms::ComboBox());
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->tmrAction = (gcnew System::Windows::Forms::Timer(this->components));
-			this->pnlBallWorld = (gcnew BakaDevBouncingBall::DoubleBufferedPanel());
+			this->pnlBallWorld = (gcnew BouncingBall::DoubleBufferedPanel());
 			this->grpControlCenter->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->numericUpDown))->BeginInit();
 			this->SuspendLayout();
@@ -328,11 +328,10 @@ namespace BakaDevBouncingBall {
 			this->Controls->Add(this->grpControlCenter);
 			this->Controls->Add(this->pnlBallWorld);
 			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::FixedSingle;
-			this->Icon = (cli::safe_cast<System::Drawing::Icon^  >(resources->GetObject(L"$this.Icon")));
 			this->MaximizeBox = false;
 			this->Name = L"MainForm";
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
-			this->Text = L"BakaDev Crazy Bouncing Ball";
+			this->Text = L"Bouncing Ball";
 			this->FormClosing += gcnew System::Windows::Forms::FormClosingEventHandler(this, &MainForm::MainForm_FormClosing);
 			this->grpControlCenter->ResumeLayout(false);
 			this->grpControlCenter->PerformLayout();
@@ -356,7 +355,7 @@ namespace BakaDevBouncingBall {
 	private: System::Void MainForm_FormClosing(System::Object^  sender, System::Windows::Forms::FormClosingEventArgs^  e) 
 			 {
 				if(MessageBox::Show(
-					 "What? Do You want to quit?",
+					 "Do You want to quit?",
 					 this->Text, 
 					 MessageBoxButtons::YesNo, 
 					 MessageBoxIcon::Question, 
@@ -438,7 +437,7 @@ namespace BakaDevBouncingBall {
 				 this->Close();
 			 }
 	private: System::Void btnAbout_Click(System::Object^  sender, System::EventArgs^  e) {
-				 (gcnew BakaDevBouncingBall::About())->Show(this);
+				 (gcnew BouncingBall::About())->Show(this);
 			 }
 };
 }

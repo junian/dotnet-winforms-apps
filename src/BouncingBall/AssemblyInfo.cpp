@@ -11,12 +11,12 @@ using namespace System::Security::Permissions;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 //
-[assembly:AssemblyTitleAttribute("BakaDevBouncingBall")];
+[assembly:AssemblyTitleAttribute("Bouncing Ball")];
 [assembly:AssemblyDescriptionAttribute("")];
 [assembly:AssemblyConfigurationAttribute("")];
-[assembly:AssemblyCompanyAttribute("Deimon Devil Bats")];
-[assembly:AssemblyProductAttribute("BakaDevBouncingBall")];
-[assembly:AssemblyCopyrightAttribute("Copyright (c) Deimon Devil Bats 2009")];
+[assembly:AssemblyCompanyAttribute("Juniansoft")];
+[assembly:AssemblyProductAttribute("Bouncing Ball")];
+[assembly:AssemblyCopyrightAttribute("Copyright (c) Juniansoft 2009 - 2024")];
 [assembly:AssemblyTrademarkAttribute("")];
 [assembly:AssemblyCultureAttribute("")];
 
