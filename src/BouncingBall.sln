@@ -1,7 +1,9 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 10.00
-# Visual Studio 2008
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BakaDevBouncingBall", "BakaDevBouncingBall\BakaDevBouncingBall.vcproj", "{4C0DE59A-A82E-4A57-85FD-2D0942DF1451}"
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34728.123
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BakaDevBouncingBall", "BakaDevBouncingBall\BakaDevBouncingBall.vcxproj", "{4C0DE59A-A82E-4A57-85FD-2D0942DF1451}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -16,5 +18,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8DB7BB23-66FC-44D6-83B0-A238C3CC7C5F}
 	EndGlobalSection
 EndGlobal
