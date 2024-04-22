@@ -106,7 +106,7 @@ namespace BouncingBall {
 		void InitializeComponent(void)
 		{
 			this->components = (gcnew System::ComponentModel::Container());
-			System::ComponentModel::ComponentResourceManager^  resources = (gcnew System::ComponentModel::ComponentResourceManager(MainForm::typeid));
+			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(MainForm::typeid));
 			this->grpControlCenter = (gcnew System::Windows::Forms::GroupBox());
 			this->btnExit = (gcnew System::Windows::Forms::Button());
 			this->btnAbout = (gcnew System::Windows::Forms::Button());
@@ -126,7 +126,7 @@ namespace BouncingBall {
 			this->tmrAction = (gcnew System::Windows::Forms::Timer(this->components));
 			this->pnlBallWorld = (gcnew BouncingBall::DoubleBufferedPanel());
 			this->grpControlCenter->SuspendLayout();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->numericUpDown))->BeginInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown))->BeginInit();
 			this->SuspendLayout();
 			// 
 			// grpControlCenter
@@ -176,7 +176,7 @@ namespace BouncingBall {
 			// lblTotal
 			// 
 			this->lblTotal->AutoSize = true;
-			this->lblTotal->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+			this->lblTotal->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14.25F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
 			this->lblTotal->Location = System::Drawing::Point(11, 358);
 			this->lblTotal->Name = L"lblTotal";
@@ -197,8 +197,10 @@ namespace BouncingBall {
 			// 
 			this->chkMode->CheckOnClick = true;
 			this->chkMode->FormattingEnabled = true;
-			this->chkMode->Items->AddRange(gcnew cli::array< System::Object^  >(4) {L"Ball to Ball Collision", L"Pause", L"Reverse Gravity", 
-				L"Slow Motion"});
+			this->chkMode->Items->AddRange(gcnew cli::array< System::Object^  >(4) {
+				L"Ball to Ball Collision", L"Pause", L"Reverse Gravity",
+					L"Slow Motion"
+			});
 			this->chkMode->Location = System::Drawing::Point(7, 288);
 			this->chkMode->Name = L"chkMode";
 			this->chkMode->Size = System::Drawing::Size(133, 64);
@@ -270,11 +272,11 @@ namespace BouncingBall {
 			// numericUpDown
 			// 
 			this->numericUpDown->Location = System::Drawing::Point(9, 181);
-			this->numericUpDown->Minimum = System::Decimal(gcnew cli::array< System::Int32 >(4) {1, 0, 0, 0});
+			this->numericUpDown->Minimum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1, 0, 0, 0 });
 			this->numericUpDown->Name = L"numericUpDown";
 			this->numericUpDown->Size = System::Drawing::Size(133, 20);
 			this->numericUpDown->TabIndex = 3;
-			this->numericUpDown->Value = System::Decimal(gcnew cli::array< System::Int32 >(4) {1, 0, 0, 0});
+			this->numericUpDown->Value = System::Decimal(gcnew cli::array< System::Int32 >(4) { 1, 0, 0, 0 });
 			// 
 			// label2
 			// 
@@ -328,6 +330,7 @@ namespace BouncingBall {
 			this->Controls->Add(this->grpControlCenter);
 			this->Controls->Add(this->pnlBallWorld);
 			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::FixedSingle;
+			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
 			this->MaximizeBox = false;
 			this->Name = L"MainForm";
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
@@ -335,7 +338,7 @@ namespace BouncingBall {
 			this->FormClosing += gcnew System::Windows::Forms::FormClosingEventHandler(this, &MainForm::MainForm_FormClosing);
 			this->grpControlCenter->ResumeLayout(false);
 			this->grpControlCenter->PerformLayout();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->numericUpDown))->EndInit();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->numericUpDown))->EndInit();
 			this->ResumeLayout(false);
 
 		}
