@@ -1,5 +1,6 @@
 ﻿Imports System.ComponentModel
 Imports System.IO
+Imports System.Security.Cryptography
 Imports Newtonsoft.Json
 Imports TaskManager.Core
 Imports TaskManager.Data
@@ -33,7 +34,12 @@ Public Class ContactListingForm
                 Else
                     contacts = Await contactRepo.GetContactsAsync()
                 End If
-                grdContacts.DataSource = contacts
+                Dim search = TextBoxSearch.Text.Trim().ToLower()
+                If String.IsNullOrWhiteSpace(search) Then
+                    grdContacts.DataSource = contacts
+                Else
+                    grdContacts.DataSource = contacts.Where(Function(x) x.Name.ToLower().Contains(search) Or x.Email.Contains(search) Or x.Phone.Contains(search)).ToList()
+                End If
                 grdContacts.Columns("Id").Visible = False
             End Using
         Catch ex As Exception
@@ -136,5 +142,9 @@ Public Class ContactListingForm
                 MessageBox.Show(ex.ToString(), AppName, MessageBoxButtons.OK, MessageBoxIcon.Error)
             End Try
         End If
+    End Sub
+
+    Private Async Sub ButtonSearch_Click(sender As Object, e As EventArgs) Handles ButtonSearch.Click
+        Await GetContactsAsync()
     End Sub
 End Class

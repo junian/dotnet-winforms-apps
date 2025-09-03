@@ -31,6 +31,8 @@ Partial Class ContactListingForm
         Me.ButtonExport = New System.Windows.Forms.Button()
         Me.ButtonImport = New System.Windows.Forms.Button()
         Me.CheckShowActive = New System.Windows.Forms.CheckBox()
+        Me.TextBoxSearch = New System.Windows.Forms.TextBox()
+        Me.ButtonSearch = New System.Windows.Forms.Button()
         CType(Me.grdContacts, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -51,7 +53,7 @@ Partial Class ContactListingForm
         'ButtonAdd
         '
         Me.ButtonAdd.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.ButtonAdd.Location = New System.Drawing.Point(12, 426)
+        Me.ButtonAdd.Location = New System.Drawing.Point(12, 454)
         Me.ButtonAdd.Name = "ButtonAdd"
         Me.ButtonAdd.Size = New System.Drawing.Size(75, 23)
         Me.ButtonAdd.TabIndex = 1
@@ -73,7 +75,7 @@ Partial Class ContactListingForm
         'ButtonEdit
         '
         Me.ButtonEdit.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.ButtonEdit.Location = New System.Drawing.Point(93, 426)
+        Me.ButtonEdit.Location = New System.Drawing.Point(93, 454)
         Me.ButtonEdit.Name = "ButtonEdit"
         Me.ButtonEdit.Size = New System.Drawing.Size(75, 23)
         Me.ButtonEdit.TabIndex = 3
@@ -83,7 +85,7 @@ Partial Class ContactListingForm
         'ButtonDelete
         '
         Me.ButtonDelete.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.ButtonDelete.Location = New System.Drawing.Point(174, 426)
+        Me.ButtonDelete.Location = New System.Drawing.Point(174, 454)
         Me.ButtonDelete.Name = "ButtonDelete"
         Me.ButtonDelete.Size = New System.Drawing.Size(90, 23)
         Me.ButtonDelete.TabIndex = 4
@@ -94,7 +96,7 @@ Partial Class ContactListingForm
         '
         Me.ButtonReset.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.ButtonReset.ForeColor = System.Drawing.Color.Red
-        Me.ButtonReset.Location = New System.Drawing.Point(359, 426)
+        Me.ButtonReset.Location = New System.Drawing.Point(359, 454)
         Me.ButtonReset.Name = "ButtonReset"
         Me.ButtonReset.Size = New System.Drawing.Size(107, 23)
         Me.ButtonReset.TabIndex = 5
@@ -131,11 +133,30 @@ Partial Class ContactListingForm
         Me.CheckShowActive.Text = "Show Active Contacts"
         Me.CheckShowActive.UseVisualStyleBackColor = True
         '
+        'TextBoxSearch
+        '
+        Me.TextBoxSearch.Location = New System.Drawing.Point(12, 416)
+        Me.TextBoxSearch.Name = "TextBoxSearch"
+        Me.TextBoxSearch.Size = New System.Drawing.Size(372, 20)
+        Me.TextBoxSearch.TabIndex = 9
+        '
+        'ButtonSearch
+        '
+        Me.ButtonSearch.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.ButtonSearch.Location = New System.Drawing.Point(391, 413)
+        Me.ButtonSearch.Name = "ButtonSearch"
+        Me.ButtonSearch.Size = New System.Drawing.Size(75, 23)
+        Me.ButtonSearch.TabIndex = 10
+        Me.ButtonSearch.Text = "Search"
+        Me.ButtonSearch.UseVisualStyleBackColor = True
+        '
         'ContactListingForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(478, 518)
+        Me.Controls.Add(Me.ButtonSearch)
+        Me.Controls.Add(Me.TextBoxSearch)
         Me.Controls.Add(Me.CheckShowActive)
         Me.Controls.Add(Me.ButtonImport)
         Me.Controls.Add(Me.ButtonExport)
@@ -162,4 +183,6 @@ Partial Class ContactListingForm
     Friend WithEvents ButtonExport As Button
     Friend WithEvents ButtonImport As Button
     Friend WithEvents CheckShowActive As CheckBox
+    Friend WithEvents TextBoxSearch As TextBox
+    Friend WithEvents ButtonSearch As Button
 End Class
