@@ -1,4 +1,6 @@
 ﻿Imports System.ComponentModel
+Imports System.IO
+Imports Newtonsoft.Json
 Imports TaskManager.Core
 Imports TaskManager.Data
 
@@ -91,5 +93,28 @@ Public Class ContactListingForm
 
     Private Async Sub CheckShowActive_CheckedChanged(sender As Object, e As EventArgs) Handles CheckShowActive.CheckedChanged
         Await GetContactsAsync()
+    End Sub
+
+    Private Sub ButtonExport_Click(sender As Object, e As EventArgs) Handles ButtonExport.Click
+
+        Dim saveFileDialog As New SaveFileDialog With {
+            .DefaultExt = "json",
+            .Filter = "JSON files (*.json)|*.json|All files (*.*)|*.*"
+        }
+
+        If saveFileDialog.ShowDialog() = DialogResult.OK Then
+            Dim filePath As String = saveFileDialog.FileName
+
+            Dim jsonString As String = JsonConvert.SerializeObject(contacts)
+
+            File.WriteAllText(filePath, jsonString)
+
+            ' Notify the user that the file has been saved
+            MessageBox.Show("Export file saved successfully!", AppName, MessageBoxButtons.OK, MessageBoxIcon.Information)
+        End If
+    End Sub
+
+    Private Sub ButtonImport_Click(sender As Object, e As EventArgs) Handles ButtonImport.Click
+
     End Sub
 End Class

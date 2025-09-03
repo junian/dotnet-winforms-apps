@@ -131,7 +131,7 @@ Partial Class ContactListingForm
         Me.CheckShowActive.Text = "Show Active Contacts"
         Me.CheckShowActive.UseVisualStyleBackColor = True
         '
-        'ContactListing
+        'ContactListingForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -145,7 +145,7 @@ Partial Class ContactListingForm
         Me.Controls.Add(Me.lblHeader)
         Me.Controls.Add(Me.ButtonAdd)
         Me.Controls.Add(Me.grdContacts)
-        Me.Name = "ContactListing"
+        Me.Name = "ContactListingForm"
         Me.Text = "Contact Listing"
         CType(Me.grdContacts, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
