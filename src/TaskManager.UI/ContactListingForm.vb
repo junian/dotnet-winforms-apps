@@ -9,6 +9,15 @@ Public Class ContactListingForm
     Public Const AppName = "Contact Manager"
     Private contacts As New List(Of Contact)()
 
+    Public Sub New()
+
+        ' This call is required by the designer.
+        InitializeComponent()
+
+        ' Add any initialization after the InitializeComponent() call.
+        Me.Icon = My.Resources.Icon
+    End Sub
+
     Private Async Sub MainForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Try
             Await SQLiteHelper.SetupConnectionAsync()

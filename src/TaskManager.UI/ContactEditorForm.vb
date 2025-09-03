@@ -1,5 +1,6 @@
 ﻿Imports System.ComponentModel.DataAnnotations
 Imports System.Runtime.CompilerServices
+Imports System.Runtime.Versioning
 Imports TaskManager.Core
 Imports TaskManager.Data
 
@@ -10,6 +11,7 @@ Public Class ContactEditorForm
 
     Public Sub New(Optional contact As Contact = Nothing)
         Me.InitializeComponent()
+        Me.Icon = My.Resources.Icon
 
         _isEditMode = contact IsNot Nothing
 
