@@ -192,16 +192,6 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\TaskManager.Core\ContactManager.Core.vbproj">
-      <Project>{c6298266-bb0c-4a78-97a5-3380b75585db}</Project>
-      <Name>ContactManager.Core</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\TaskManager.Data\ContactManager.Data.vbproj">
-      <Project>{30853eb5-9a42-4956-863c-7e315a177659}</Project>
-      <Name>ContactManager.Data</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\Icon.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
