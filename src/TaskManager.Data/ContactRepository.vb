@@ -14,38 +14,38 @@ Public Class ContactRepository
     Public Sub Dispose() Implements IDisposable.Dispose
     End Sub
 
-    Public Function InsertContact(contact As Contact) As Boolean
+    Public Async Function InsertContactAsync(contact As Contact) As Task(Of Boolean)
         Using connection As New SQLiteConnection(SQLiteHelper.DBPath)
-            connection.Open()
+            Await connection.OpenAsync()
             Dim insertQuery As String = $"INSERT INTO {TableContact} ({ColumnName}, {ColumnEmail}, {ColumnPhone}, {ColumnIsActive}) VALUES (@{ColumnName}, @{ColumnEmail}, @{ColumnPhone}, @{ColumnIsActive})"
             Using command As New SQLiteCommand(insertQuery, connection)
                 command.Parameters.AddWithValue($"@{ColumnName}", contact.Name)
                 command.Parameters.AddWithValue($"@{ColumnEmail}", contact.Email)
                 command.Parameters.AddWithValue($"@{ColumnPhone}", contact.Phone)
                 command.Parameters.AddWithValue($"@{ColumnIsActive}", contact.IsActive)
-                command.ExecuteNonQuery()
+                Await command.ExecuteNonQueryAsync()
             End Using
         End Using
 
         Return False
     End Function
 
-    Public Function DeleteContact(contact As Contact) As Boolean
+    Public Async Function DeleteContactAsync(contact As Contact) As Task(Of Boolean)
         Using connection As New SQLiteConnection(SQLiteHelper.DBPath)
-            connection.Open()
+            Await connection.OpenAsync()
             Dim insertQuery As String = $"DELETE FROM {TableContact} WHERE {ColumnId}=@{ColumnId}"
             Using command As New SQLiteCommand(insertQuery, connection)
                 command.Parameters.AddWithValue($"@{ColumnId}", contact.Id)
-                command.ExecuteNonQuery()
+                Await command.ExecuteNonQueryAsync()
             End Using
         End Using
 
         Return False
     End Function
 
-    Public Function UpdateContact(contact As Contact) As Boolean
+    Public Async Function UpdateContactAsync(contact As Contact) As Task(Of Boolean)
         Using connection As New SQLiteConnection(SQLiteHelper.DBPath)
-            connection.Open()
+            Await connection.OpenAsync()
             Dim insertQuery As String = $"UPDATE {TableContact} SET {ColumnName}=@{ColumnName}, {ColumnEmail}=@{ColumnEmail}, {ColumnPhone}=@{ColumnPhone}, {ColumnIsActive}=@{ColumnIsActive} WHERE {ColumnId}=@{ColumnId}"
             Using command As New SQLiteCommand(insertQuery, connection)
                 command.Parameters.AddWithValue($"@{ColumnId}", contact.Id)
@@ -53,14 +53,14 @@ Public Class ContactRepository
                 command.Parameters.AddWithValue($"@{ColumnEmail}", contact.Email)
                 command.Parameters.AddWithValue($"@{ColumnPhone}", contact.Phone)
                 command.Parameters.AddWithValue($"@{ColumnIsActive}", contact.IsActive)
-                command.ExecuteNonQuery()
+                Await command.ExecuteNonQueryAsync()
             End Using
         End Using
 
         Return False
     End Function
 
-    Public Function GetContacts(Optional filterActive As Boolean = False) As List(Of Contact)
+    Public Async Function GetContactsAsync(Optional filterActive As Boolean = False) As Task(Of List(Of Contact))
         Dim contacts As New List(Of Contact)
 
         Using connection As New SQLiteConnection(SQLiteHelper.DBPath)
@@ -70,7 +70,7 @@ Public Class ContactRepository
                 selectQuery &= $" WHERE {ColumnIsActive} != 0"
             End If
             Using command As New SQLiteCommand(selectQuery, connection)
-                Using reader As SQLiteDataReader = command.ExecuteReader()
+                Using reader As SQLiteDataReader = Await command.ExecuteReaderAsync()
                     While reader.Read()
                         contacts.Add(New Contact() With {
                                      .Id = reader(ColumnId),

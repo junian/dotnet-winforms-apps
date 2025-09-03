@@ -128,17 +128,17 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AddContact.Designer.vb">
-      <DependentUpon>AddContact.vb</DependentUpon>
+    <Compile Include="ContactEditorForm.Designer.vb">
+      <DependentUpon>ContactEditorForm.vb</DependentUpon>
     </Compile>
-    <Compile Include="AddContact.vb">
+    <Compile Include="ContactEditorForm.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ContactListing.vb">
+    <Compile Include="ContactListingForm.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ContactListing.Designer.vb">
-      <DependentUpon>ContactListing.vb</DependentUpon>
+    <Compile Include="ContactListingForm.Designer.vb">
+      <DependentUpon>ContactListingForm.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -159,11 +159,11 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="AddContact.resx">
-      <DependentUpon>AddContact.vb</DependentUpon>
+    <EmbeddedResource Include="ContactEditorForm.resx">
+      <DependentUpon>ContactEditorForm.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ContactListing.resx">
-      <DependentUpon>ContactListing.vb</DependentUpon>
+    <EmbeddedResource Include="ContactListingForm.resx">
+      <DependentUpon>ContactListingForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>

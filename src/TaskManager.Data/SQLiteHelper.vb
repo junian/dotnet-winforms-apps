@@ -6,16 +6,16 @@ Public Class SQLiteHelper
     Private Shared _databaseFile As String = "ContactManager.db"
     Public Shared DBPath As String = $"Data Source={_databaseFile};Version=3;FailIfMissing=True;"
 
-    Public Shared Sub SetupConnection()
-        If Not DatabaseIsValid() Then
-            ResetDatabase()
+    Public Shared Async Function SetupConnectionAsync() As Task
+        If Not Await DatabaseIsValidAsync() Then
+            ResetDatabaseAsync()
         End If
-    End Sub
+    End Function
 
-    Shared Function DatabaseIsValid() As Boolean
+    Shared Async Function DatabaseIsValidAsync() As Task(Of Boolean)
         Using db As New SQLiteConnection(DBPath)
             Try
-                db.Open()
+                Await db.OpenAsync()
                 Using transaction = db.BeginTransaction()
                     transaction.Rollback()
                 End Using
@@ -26,22 +26,22 @@ Public Class SQLiteHelper
         Return True
     End Function
 
-    Shared Sub InitDB()
+    Shared Async Function InitDBAsync() As Task
         Using connection As New SQLiteConnection(DBPath)
-            connection.Open()
+            Await connection.OpenAsync()
             Dim createTableQuery As String = $"CREATE TABLE {ContactRepository.TableContact} ({ContactRepository.ColumnId} INTEGER PRIMARY KEY, {ContactRepository.ColumnName} TEXT, {ContactRepository.ColumnEmail} TEXT, {ContactRepository.ColumnPhone} TEXT, {ContactRepository.ColumnIsActive} INTEGER)"
             Using command As New SQLiteCommand(createTableQuery, connection)
-                command.ExecuteNonQuery()
+                Await command.ExecuteNonQueryAsync()
             End Using
         End Using
-    End Sub
+    End Function
 
-    Shared Sub SeedData()
+    Shared Async Function SeedDataAsync() As Task
         Dim contactRepo As New ContactRepository()
 
-        contactRepo.InsertContact(New Core.Contact() With {.Name = "John Doe", .Email = "John@gmail.com", .Phone = "9999999999"})
-        contactRepo.InsertContact(New Core.Contact() With {.Name = "Jane Smith", .Email = "Jane@gmail.com", .Phone = "9999999999"})
-    End Sub
+        Await contactRepo.InsertContactAsync(New Core.Contact() With {.Name = "John Doe", .Email = "John@gmail.com", .Phone = "9999999999"})
+        Await contactRepo.InsertContactAsync(New Core.Contact() With {.Name = "Jane Smith", .Email = "Jane@gmail.com", .Phone = "9999999999"})
+    End Function
 
     Shared Sub RecreateDatabaseFile()
         If File.Exists(_databaseFile) Then
@@ -50,10 +50,10 @@ Public Class SQLiteHelper
         SQLiteConnection.CreateFile(_databaseFile)
     End Sub
 
-    Public Shared Sub ResetDatabase()
+    Public Shared Async Function ResetDatabaseAsync() As Task
         RecreateDatabaseFile()
-        InitDB()
-        SeedData()
-    End Sub
+        Await InitDBAsync()
+        Await SeedDataAsync()
+    End Function
 
 End Class

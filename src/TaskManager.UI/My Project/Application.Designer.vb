@@ -32,7 +32,7 @@ Namespace My
         
         <Global.System.Diagnostics.DebuggerStepThroughAttribute()>  _
         Protected Overrides Sub OnCreateMainForm()
-            Me.MainForm = Global.TaskManager.UI.ContactListing
+            Me.MainForm = Global.TaskManager.UI.ContactListingForm
         End Sub
         
         <Global.System.Diagnostics.DebuggerStepThroughAttribute()>  _
