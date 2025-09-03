@@ -29,6 +29,7 @@ Partial Class AddContact
         Me.lblPhone = New System.Windows.Forms.Label()
         Me.lblEmail = New System.Windows.Forms.Label()
         Me.btnAdd = New System.Windows.Forms.Button()
+        Me.CheckBoxIsActive = New System.Windows.Forms.CheckBox()
         Me.SuspendLayout()
         '
         'txtName
@@ -81,18 +82,29 @@ Partial Class AddContact
         '
         'btnAdd
         '
-        Me.btnAdd.Location = New System.Drawing.Point(210, 191)
+        Me.btnAdd.Location = New System.Drawing.Point(183, 191)
         Me.btnAdd.Name = "btnAdd"
-        Me.btnAdd.Size = New System.Drawing.Size(75, 23)
+        Me.btnAdd.Size = New System.Drawing.Size(102, 23)
         Me.btnAdd.TabIndex = 6
         Me.btnAdd.Text = "Add Contact"
         Me.btnAdd.UseVisualStyleBackColor = True
+        '
+        'CheckBoxIsActive
+        '
+        Me.CheckBoxIsActive.AutoSize = True
+        Me.CheckBoxIsActive.Location = New System.Drawing.Point(33, 195)
+        Me.CheckBoxIsActive.Name = "CheckBoxIsActive"
+        Me.CheckBoxIsActive.Size = New System.Drawing.Size(56, 17)
+        Me.CheckBoxIsActive.TabIndex = 7
+        Me.CheckBoxIsActive.Text = "Active"
+        Me.CheckBoxIsActive.UseVisualStyleBackColor = True
         '
         'AddContact
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(341, 262)
+        Me.Controls.Add(Me.CheckBoxIsActive)
         Me.Controls.Add(Me.btnAdd)
         Me.Controls.Add(Me.lblEmail)
         Me.Controls.Add(Me.lblPhone)
@@ -114,4 +126,5 @@ Partial Class AddContact
     Friend WithEvents lblPhone As Label
     Friend WithEvents lblEmail As Label
     Friend WithEvents btnAdd As Button
+    Friend WithEvents CheckBoxIsActive As CheckBox
 End Class
