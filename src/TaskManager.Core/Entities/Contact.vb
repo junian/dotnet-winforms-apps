@@ -1,4 +1,12 @@
-﻿Public Class Contact
+﻿
+Imports Newtonsoft.Json
+
+Public Class Contact
+
+    <JsonIgnore>
+    Public Property Id As Integer
+
+    Public Property IsActive As Boolean
 
     Private _name As String
     Public Property Name() As String
@@ -16,7 +24,7 @@
             Return _email
         End Get
         Set(ByVal value As String)
-            _name = value
+            _email = value
         End Set
     End Property
 
