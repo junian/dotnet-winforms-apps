@@ -17,28 +17,28 @@
 
 ## Tasks
 1. **Fix the existing Bugs**:
-	- Find and fix the existing bugs in the application, these will all be fixed when you can list and add contacts successfully at the moment there are a few bugs preventing you from doing this 
+	- [x] Find and fix the existing bugs in the application, these will all be fixed when you can list and add contacts successfully at the moment there are a few bugs preventing you from doing this 
 
 2. **Implement an Edit Form**:
-	- Need a new button on the Contact Listing to open a new Edit Form
-	- This will open an edit form for the Contact selected on the grid
-	- The new form will have fields for all the Contact properties along with a save button
-	- When the save is complete it will return to the listing and refresh the grid 
+	- [x] Need a new button on the Contact Listing to open a new Edit Form
+	- [x] This will open an edit form for the Contact selected on the grid
+	- [x] The new form will have fields for all the Contact properties along with a save button
+	- [x] When the save is complete it will return to the listing and refresh the grid 
 	
 3.  **Implement a Contact Import**
-	- Create a Contact file import that can be triggered from the Contact Listing form
-	- The format of the file can be CSV, XML or JSON, you can choose
-	- Add some basic validation to ensure the file is valid
-	- Provide a confirmation of the import to the user 
+	- [x] Create a Contact file import that can be triggered from the Contact Listing form
+	- [x] The format of the file can be CSV, XML or **JSON**, you can choose
+	- [x] Add some basic validation to ensure the file is valid
+	- [x] Provide a confirmation of the import to the user 
 
 ## Extra Optional Tasks
 
 1. **Implement a Search Feature**:
-	- Add a way of filtering the Contacts on the Contact Listing Form
+	- [ ] Add a way of filtering the Contacts on the Contact Listing Form
    
 2. **Implement an active flag for Contacts**:
-	- Need to be able to filter the contact listing so it only displays contacts that are active
+	- [x] Need to be able to filter the contact listing so it only displays contacts that are active
 
 3. **Implement Error Handling and Validation**:
-	- Currently none of the forms have any error handling or validation, implement this throughout
+	- [x] Currently none of the forms have any error handling or validation, implement this throughout
 
