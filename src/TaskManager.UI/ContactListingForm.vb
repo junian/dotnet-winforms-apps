@@ -109,12 +109,32 @@ Public Class ContactListingForm
 
             File.WriteAllText(filePath, jsonString)
 
-            ' Notify the user that the file has been saved
             MessageBox.Show("Export file saved successfully!", AppName, MessageBoxButtons.OK, MessageBoxIcon.Information)
         End If
     End Sub
 
-    Private Sub ButtonImport_Click(sender As Object, e As EventArgs) Handles ButtonImport.Click
+    Private Async Sub ButtonImport_Click(sender As Object, e As EventArgs) Handles ButtonImport.Click
+        Dim openFileDialog As New OpenFileDialog With {
+            .DefaultExt = "json",
+            .Filter = "JSON files (*.json)|*.json|All files (*.*)|*.*"
+        }
 
+        If openFileDialog.ShowDialog() = DialogResult.OK Then
+            Dim filePath As String = openFileDialog.FileName
+
+            Try
+                Dim importedContacts = JsonConvert.DeserializeObject(Of List(Of Contact))(File.ReadAllText(filePath))
+                Using contactRepo As New ContactRepository()
+                    Dim result = Await contactRepo.BatchInsertAsync(importedContacts)
+                    If result = False Then
+                        Throw New Exception("Error batch saving")
+                    End If
+                End Using
+                Await GetContactsAsync()
+                MessageBox.Show("Import file saved successfully!", AppName, MessageBoxButtons.OK, MessageBoxIcon.Information)
+            Catch ex As Exception
+                MessageBox.Show(ex.ToString(), AppName, MessageBoxButtons.OK, MessageBoxIcon.Error)
+            End Try
+        End If
     End Sub
 End Class

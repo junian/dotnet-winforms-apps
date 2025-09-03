@@ -86,4 +86,29 @@ Public Class ContactRepository
 
         Return contacts
     End Function
+
+    Public Async Function BatchInsertAsync(contacts As List(Of Contact)) As Task(Of Boolean)
+        Using connection As New SQLiteConnection(SQLiteHelper.DBPath)
+            Await connection.OpenAsync()
+            Using transaction As SQLiteTransaction = connection.BeginTransaction()
+                Try
+                    Dim insertQuery As String = $"INSERT INTO {TableContact} ({ColumnName}, {ColumnEmail}, {ColumnPhone}, {ColumnIsActive}) VALUES (@{ColumnName}, @{ColumnEmail}, @{ColumnPhone}, @{ColumnIsActive})"
+                    Using command As New SQLiteCommand(insertQuery, connection)
+                        For Each contact As Contact In contacts
+                            command.Parameters.AddWithValue($"@{ColumnName}", contact.Name)
+                            command.Parameters.AddWithValue($"@{ColumnEmail}", contact.Email)
+                            command.Parameters.AddWithValue($"@{ColumnPhone}", contact.Phone)
+                            command.Parameters.AddWithValue($"@{ColumnIsActive}", contact.IsActive)
+                            Await command.ExecuteNonQueryAsync()
+                        Next
+                    End Using
+                    transaction.Commit()
+                Catch ex As Exception
+                    transaction.Rollback()
+                    Return False
+                End Try
+            End Using
+        End Using
+        Return True
+    End Function
 End Class
