@@ -15,6 +15,14 @@
 1. Clone this repo
 2. When you have completed your changes please share a link to a repo or compressed file with your changes
 
+## Demo
+
+
+
+https://github.com/user-attachments/assets/3b4a8b99-f7a8-4e4e-a929-623f099ca00a
+
+
+
 ## Tasks
 1. **Fix the existing Bugs**:
 	- [x] Find and fix the existing bugs in the application, these will all be fixed when you can list and add contacts successfully at the moment there are a few bugs preventing you from doing this 
