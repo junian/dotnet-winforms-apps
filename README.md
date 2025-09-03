@@ -34,7 +34,7 @@
 ## Extra Optional Tasks
 
 1. **Implement a Search Feature**:
-	- [ ] Add a way of filtering the Contacts on the Contact Listing Form
+	- [x] Add a way of filtering the Contacts on the Contact Listing Form
    
 2. **Implement an active flag for Contacts**:
 	- [x] Need to be able to filter the contact listing so it only displays contacts that are active
