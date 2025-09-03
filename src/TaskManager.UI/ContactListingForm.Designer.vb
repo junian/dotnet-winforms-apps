@@ -167,6 +167,7 @@ Partial Class ContactListingForm
         Me.Controls.Add(Me.ButtonAdd)
         Me.Controls.Add(Me.grdContacts)
         Me.Name = "ContactListingForm"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Contact Listing"
         CType(Me.grdContacts, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)

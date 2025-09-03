@@ -99,7 +99,7 @@ Partial Class ContactEditorForm
         Me.CheckBoxIsActive.Text = "Active"
         Me.CheckBoxIsActive.UseVisualStyleBackColor = True
         '
-        'AddContact
+        'ContactEditorForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -112,7 +112,8 @@ Partial Class ContactEditorForm
         Me.Controls.Add(Me.txtPhone)
         Me.Controls.Add(Me.txtEmail)
         Me.Controls.Add(Me.txtName)
-        Me.Name = "AddContact"
+        Me.Name = "ContactEditorForm"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Add Contact"
         Me.ResumeLayout(False)
         Me.PerformLayout()
