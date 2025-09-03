@@ -2,8 +2,8 @@
 Imports System.IO
 Imports System.Security.Cryptography
 Imports Newtonsoft.Json
-Imports TaskManager.Core
-Imports TaskManager.Data
+Imports ContactManager.Core
+Imports ContactManager.Data
 
 Public Class ContactListingForm
     Public Const AppName = "Contact Manager"

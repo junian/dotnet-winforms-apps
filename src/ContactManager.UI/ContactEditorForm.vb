@@ -1,8 +1,8 @@
 ﻿Imports System.ComponentModel.DataAnnotations
 Imports System.Runtime.CompilerServices
 Imports System.Runtime.Versioning
-Imports TaskManager.Core
-Imports TaskManager.Data
+Imports ContactManager.Core
+Imports ContactManager.Data
 
 Public Class ContactEditorForm
 
