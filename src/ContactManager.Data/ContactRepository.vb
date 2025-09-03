@@ -1,5 +1,5 @@
 ﻿Imports System.Data.SQLite
-Imports TaskManager.Core
+Imports ContactManager.Core
 
 Public Class ContactRepository
     Implements IDisposable
