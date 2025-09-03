@@ -8,7 +8,7 @@ Public Class SQLiteHelper
 
     Public Shared Async Function SetupConnectionAsync() As Task
         If Not Await DatabaseIsValidAsync() Then
-            ResetDatabaseAsync()
+            Await ResetDatabaseAsync()
         End If
     End Function
 
