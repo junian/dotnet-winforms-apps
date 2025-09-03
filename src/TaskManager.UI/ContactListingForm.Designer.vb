@@ -135,6 +135,7 @@ Partial Class ContactListingForm
         '
         'TextBoxSearch
         '
+        Me.TextBoxSearch.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.TextBoxSearch.Location = New System.Drawing.Point(12, 416)
         Me.TextBoxSearch.Name = "TextBoxSearch"
         Me.TextBoxSearch.Size = New System.Drawing.Size(372, 20)
