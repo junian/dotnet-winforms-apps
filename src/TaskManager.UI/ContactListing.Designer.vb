@@ -25,20 +25,33 @@ Partial Class ContactListing
         Me.grdContacts = New System.Windows.Forms.DataGridView()
         Me.ButtonAdd = New System.Windows.Forms.Button()
         Me.lblHeader = New System.Windows.Forms.Label()
+        Me.ButtonEdit = New System.Windows.Forms.Button()
+        Me.ButtonDelete = New System.Windows.Forms.Button()
+        Me.ButtonReset = New System.Windows.Forms.Button()
+        Me.ButtonExport = New System.Windows.Forms.Button()
+        Me.ButtonImport = New System.Windows.Forms.Button()
+        Me.CheckShowActive = New System.Windows.Forms.CheckBox()
         CType(Me.grdContacts, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'grdContacts
         '
+        Me.grdContacts.AllowUserToAddRows = False
+        Me.grdContacts.AllowUserToDeleteRows = False
+        Me.grdContacts.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.grdContacts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.grdContacts.Location = New System.Drawing.Point(12, 35)
         Me.grdContacts.Name = "grdContacts"
-        Me.grdContacts.Size = New System.Drawing.Size(448, 357)
+        Me.grdContacts.ReadOnly = True
+        Me.grdContacts.Size = New System.Drawing.Size(454, 375)
         Me.grdContacts.TabIndex = 0
         '
         'ButtonAdd
         '
-        Me.ButtonAdd.Location = New System.Drawing.Point(23, 407)
+        Me.ButtonAdd.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.ButtonAdd.Location = New System.Drawing.Point(12, 426)
         Me.ButtonAdd.Name = "ButtonAdd"
         Me.ButtonAdd.Size = New System.Drawing.Size(75, 23)
         Me.ButtonAdd.TabIndex = 1
@@ -47,6 +60,7 @@ Partial Class ContactListing
         '
         'lblHeader
         '
+        Me.lblHeader.Anchor = System.Windows.Forms.AnchorStyles.Top
         Me.lblHeader.AutoSize = True
         Me.lblHeader.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblHeader.Location = New System.Drawing.Point(193, 9)
@@ -54,12 +68,80 @@ Partial Class ContactListing
         Me.lblHeader.Size = New System.Drawing.Size(71, 17)
         Me.lblHeader.TabIndex = 2
         Me.lblHeader.Text = "Contacts"
+        Me.lblHeader.TextAlign = System.Drawing.ContentAlignment.TopCenter
+        '
+        'ButtonEdit
+        '
+        Me.ButtonEdit.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.ButtonEdit.Location = New System.Drawing.Point(93, 426)
+        Me.ButtonEdit.Name = "ButtonEdit"
+        Me.ButtonEdit.Size = New System.Drawing.Size(75, 23)
+        Me.ButtonEdit.TabIndex = 3
+        Me.ButtonEdit.Text = "Edit Contact"
+        Me.ButtonEdit.UseVisualStyleBackColor = True
+        '
+        'ButtonDelete
+        '
+        Me.ButtonDelete.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.ButtonDelete.Location = New System.Drawing.Point(174, 426)
+        Me.ButtonDelete.Name = "ButtonDelete"
+        Me.ButtonDelete.Size = New System.Drawing.Size(90, 23)
+        Me.ButtonDelete.TabIndex = 4
+        Me.ButtonDelete.Text = "Delete Contact"
+        Me.ButtonDelete.UseVisualStyleBackColor = True
+        '
+        'ButtonReset
+        '
+        Me.ButtonReset.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.ButtonReset.ForeColor = System.Drawing.Color.Red
+        Me.ButtonReset.Location = New System.Drawing.Point(359, 426)
+        Me.ButtonReset.Name = "ButtonReset"
+        Me.ButtonReset.Size = New System.Drawing.Size(107, 23)
+        Me.ButtonReset.TabIndex = 5
+        Me.ButtonReset.Text = "Reset Database"
+        Me.ButtonReset.UseVisualStyleBackColor = True
+        '
+        'ButtonExport
+        '
+        Me.ButtonExport.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.ButtonExport.Location = New System.Drawing.Point(12, 483)
+        Me.ButtonExport.Name = "ButtonExport"
+        Me.ButtonExport.Size = New System.Drawing.Size(103, 23)
+        Me.ButtonExport.TabIndex = 6
+        Me.ButtonExport.Text = "Export JSON"
+        Me.ButtonExport.UseVisualStyleBackColor = True
+        '
+        'ButtonImport
+        '
+        Me.ButtonImport.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.ButtonImport.Location = New System.Drawing.Point(121, 483)
+        Me.ButtonImport.Name = "ButtonImport"
+        Me.ButtonImport.Size = New System.Drawing.Size(103, 23)
+        Me.ButtonImport.TabIndex = 7
+        Me.ButtonImport.Text = "Import JSON"
+        Me.ButtonImport.UseVisualStyleBackColor = True
+        '
+        'CheckShowActive
+        '
+        Me.CheckShowActive.AutoSize = True
+        Me.CheckShowActive.Location = New System.Drawing.Point(12, 12)
+        Me.CheckShowActive.Name = "CheckShowActive"
+        Me.CheckShowActive.Size = New System.Drawing.Size(131, 17)
+        Me.CheckShowActive.TabIndex = 8
+        Me.CheckShowActive.Text = "Show Active Contacts"
+        Me.CheckShowActive.UseVisualStyleBackColor = True
         '
         'ContactListing
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(478, 500)
+        Me.ClientSize = New System.Drawing.Size(478, 518)
+        Me.Controls.Add(Me.CheckShowActive)
+        Me.Controls.Add(Me.ButtonImport)
+        Me.Controls.Add(Me.ButtonExport)
+        Me.Controls.Add(Me.ButtonReset)
+        Me.Controls.Add(Me.ButtonDelete)
+        Me.Controls.Add(Me.ButtonEdit)
         Me.Controls.Add(Me.lblHeader)
         Me.Controls.Add(Me.ButtonAdd)
         Me.Controls.Add(Me.grdContacts)
@@ -74,4 +156,10 @@ Partial Class ContactListing
     Friend WithEvents grdContacts As DataGridView
     Friend WithEvents ButtonAdd As Button
     Friend WithEvents lblHeader As Label
+    Friend WithEvents ButtonEdit As Button
+    Friend WithEvents ButtonDelete As Button
+    Friend WithEvents ButtonReset As Button
+    Friend WithEvents ButtonExport As Button
+    Friend WithEvents ButtonImport As Button
+    Friend WithEvents CheckShowActive As CheckBox
 End Class
