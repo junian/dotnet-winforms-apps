@@ -2,7 +2,7 @@
 
 <p align="center">Bouncing Ball Simulation Implemented using C++.NET.</p>
 
-<p align="center"><img src="https://raw.github.com/junian/bouncing-ball-sim/gh-pages/img/screenshots/bouncing-ball-sim-demo-00.gif" /></p>
+<p align="center"><img src="https://raw.github.com/junian/dotnet-winforms-apps/gh-pages/img/screenshots/bouncing-ball-sim-demo-00.gif" /></p>
 
 ## Features
 
